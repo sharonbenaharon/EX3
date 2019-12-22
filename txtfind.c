@@ -8,7 +8,7 @@ int getLine(char*s) {
 	strcpy(s, " ");
 
 	do {
-		scanf("%c",ch);
+		scanf("%c", &ch);
 		*(s + i) = ch;
 		i++;
 		countLine++;
@@ -37,7 +37,7 @@ int getWord(char* w) {
 	int i = 0;
 	
 	do {
-		scanf("%c",ch);
+		scanf("%c", &ch);
 		if (ch == EOF) {
 			return 0;
 		}
@@ -107,8 +107,7 @@ int similarCheck( char* w, char* inputWord,int n) {
 		}
 	}
 	strcpy(temp, w);
-	int i, j;
-	for (i = 0; i < strlen(w); i++) {
+	for (int i = 0; i < strlen(w); i++) {
 		char checkCT = *(w + i);
 		for (int x = 0; x < WORD_LEN_MAX; x++) {
 			if (*(inputWord + x) == *(w + i)) {
@@ -140,14 +139,9 @@ int similarCheck( char* w, char* inputWord,int n) {
 	strcpy(w, temp);
 	
 	if (bil == 1 && count <= n){
-			return 1;
-		}
-	if (bil == 0) {
-		return 0;
+		return 1;
 	}
-	if (bil == 1 && count > n) {
-		return 0;
-	}
+	return 0;
 }
 
 int countChar(char*w, char* inputWord, char checkCT) {
@@ -166,9 +160,7 @@ int countChar(char*w, char* inputWord, char checkCT) {
 	if (ctTemp <= ctInputWord) {
 		return 1;
 	}
-	if (ctTemp > ctInputWord) {
-		return 0;
-	}
+	return 0;
 }
 
 void printWordSimilar( char* w) {
