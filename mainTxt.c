@@ -14,7 +14,7 @@ int main() {
 	char s[LINE_LEN_MAX];
 	int ansLine;
 	char fileName[WORD_LEN_MAX];
-	int n;
+	
 	int lenA = 1;
 	int ans;
 	int i = 0;
@@ -27,8 +27,7 @@ int main() {
 		inputOP = *(w + i);
 	
 		if (inputOP == 'a') {
-			printf("some characters you want to check?\n");
-			scanf("%d", &n);
+			
 			ans = getWord(w);
 			while (lenA!=0) {
 				ans = getWord(w);
