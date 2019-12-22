@@ -22,5 +22,5 @@ int main() {
 	}
 	insertion_sort(arr, LEN);
 
-	return -1;
+	return 0;
 }
