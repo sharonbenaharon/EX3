@@ -18,7 +18,7 @@ int main() {
 	int lenA = 1;
 	int ans;
 	int i = 0;
-
+        int n;
 
 	
 		getWord(w);
@@ -27,8 +27,8 @@ int main() {
 		inputOP = *(w + i);
 	
 		if (inputOP == 'a') {
-			
 			ans = getWord(w);
+			n=1;
 			while (lenA!=0) {
 				ans = getWord(w);
 				int ansWord = similarCheck(w, inputWord, n);
