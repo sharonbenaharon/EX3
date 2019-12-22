@@ -40,7 +40,7 @@ int main() {
 			ans = getWord(w);
 			while (lenA!=0) {
 				ans = getWord(w);
-				int ansWord = similarCheak(w, inputWord, n);
+				int ansWord = similarCheck(w, inputWord, n);
 				if (ansWord == 1) {
 				printWordSimilar(w);
 				}
