@@ -59,7 +59,7 @@ int getWord(char* w) {
 
 
 
-int containStringCheak( char* w, char* inputWord) {
+int containStringCheck( char* w, char* inputWord) {
 
 	int lenW = strlen(w);
 	int lenInputW = strlen(inputWord);
@@ -102,7 +102,7 @@ int similarCheck( char* w, char* inputWord,int n) {
 		return 0;
 	}
 	if (strlen(w) == strlen(inputWord)) {
-		if (containStringCheak(w, inputWord) == 1) {
+		if (containStringCheck(w, inputWord) == 1) {
 			return  1;
 		}
 	}
@@ -128,7 +128,7 @@ int similarCheck( char* w, char* inputWord,int n) {
 			}
 			
 		if (strlen(w) == strlen(inputWord)) {
-				if (containStringCheak(w, inputWord) == 1) {
+				if (containStringCheck(w, inputWord) == 1) {
 					bil = 1;
 					break;
 				}
