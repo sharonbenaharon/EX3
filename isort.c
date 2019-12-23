@@ -15,18 +15,20 @@ void print(int* arr) {
 
 
 void insertion_sort(int* arr, int len) {
-int index,j;
-	for (int i = 1; i< LEN; i++) {
-	index=*(arr+i);
-	j=i-1;
-	for ( j >= 0 && index<*(arr + j); j--) {
-			*(arr+j+1)=*(arr+j);
+	int index, j;
+	for (int i = 1; i < LEN; i++) {
+		index = *(arr + i);
+		j = i - 1;
+		while (j >= 0 && index < *(arr + j)){ 
+			*(arr + j + 1) = *(arr + j);
+			j--;
 		}
+		*(arr + j + 1) = index;
 	}
 }
 void shift_element(int* arr, int i) {
-	int*j;
-	for(j=(arr+i);j<arr ;j--){
-		*j=*(j-1);
+	int* j;
+	for (j = (arr + i); j < arr; j--) {
+		*j = *(j - 1);
 	}
 }
