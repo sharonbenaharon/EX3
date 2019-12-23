@@ -14,7 +14,7 @@ FILE* file;
 
 int getLine(char* s);
 int getWord(char* w); 
-int containStringCheak( char* w, char* inputWord);
+int containStringCheck( char* w, char* inputWord);
 int similarCheck( char* w,  char* inputWord,int n);
 int countChar(char* w, char* inputWord, char checkCT);
 void printWordSimilar( char* w);
