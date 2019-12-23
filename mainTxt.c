@@ -13,7 +13,6 @@ int main() {
 	char w[WORD_LEN_MAX];
 	char s[LINE_LEN_MAX];
 	int ansLine;
-	char fileName[WORD_LEN_MAX];
 	
 	int lenA = 1;
 	int ans;
@@ -26,7 +25,7 @@ int main() {
 		getWord(w);
 		inputOP = *(w + i);
 	
-		if (inputOP == 'a') {
+		if (inputOP == 'b') {
 			ans = getWord(w);
 			n=1;
 			while (lenA!=0) {
@@ -40,10 +39,10 @@ int main() {
 			
 		}
 		int lenB = 1;
-		if (inputOP == 'b') {
+		if (inputOP == 'a') {
 			while (lenB != 0) {
 				ans = getLine(s);
-				ansLine = containStringCheak(s, inputWord);
+				ansLine = containStringCheck(s, inputWord);
 				if (ansLine == 1) {
 					printLineSimilar(s);
 				}
