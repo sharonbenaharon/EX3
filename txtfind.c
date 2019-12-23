@@ -3,36 +3,30 @@
 int getLine(char*s) {
 
 	char ch;
-	int countLine = 0;
 	int i = 0;
 	strcpy(s, " ");
 
 	do {
 		scanf("%c", &ch);
-		*(s + i) = ch;
-		i++;
-		countLine++;
-
+		
 		if (ch == '\n') {
-			*(s + i) = '\0';
-			i = 0;
 			break;
-
 		}
-		*(s + i) = '\0';
+
+		*(s + i) = ch;
+		i++;		
 	} while (ch != EOF);
+	*(s + i) = '\0';
 
 	if (ch == EOF) {
 		return 0;
 	}
 
-	
-		
-	return countLine;
+	return i;
 }
 
 int getWord(char* w) {
-    	char ch;
+    char ch;
 	int countWord = 0;
 	int i = 0;
 	
@@ -170,3 +164,4 @@ void printWordSimilar( char* w) {
 void printLineSimilar( char* s) {
 	printf("%s\n", s);
 }
+
