@@ -15,42 +15,18 @@ void print(int* arr) {
 
 
 void insertion_sort(int* arr, int len) {
-
-	for (int i = 0; i < LEN; i++) {
-	for (int j = i; j >= 0 && *(arr + (j - 1)) > * (arr + j); j--) {
-			int	temp = *(arr + j);
-			*(arr + j) = *(arr + (j - 1));
-			*(arr + (j - 1)) = temp;
-
+int index,j;
+	for (int i = 1; i< LEN; i++) {
+	index=*(arr+i);
+	j=i-1;
+	for ( j >= 0 && index<*(arr + j); j--) {
+			*(arr+j+1)=*(arr+j);
 		}
 	}
-
-	print(arr);
 }
 void shift_element(int* arr, int i) {
-	int cheak = 1;
-	int num = i;
-	int count = 0;
-	for (int z = 0; z < LEN; z++) {
-		if (*(arr + z) == num) {
-			if ((z - 0) < (num + 1)) {
-				printf("error, there is not enough room to perforn the action. \n");
-				cheak = 0;
-				break;
-			}
-			int temp = *(arr + z);
-			for (int j = z; j >= 0; j--) {
-				count++;
-				int temp2 = *(arr + (j - 1));
-				*(arr + (j - 1)) = temp;
-				temp = temp2;
-				if (count == num) {
-					break;
-				}
-			}
-		}
-	}
-	if (cheak == 1) {
-		print(arr);
+	int*j;
+	for(j=(arr+i);j<arr ;j--){
+		*j=*(j-1);
 	}
 }
