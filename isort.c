@@ -12,8 +12,6 @@ void print(int* arr) {
 
 	printf("\n");
 }
-
-
 void insertion_sort(int* arr, int len) {
 	int index, j;
 	for (int i = 1; i < LEN; i++) {
@@ -26,9 +24,10 @@ void insertion_sort(int* arr, int len) {
 		*(arr + j + 1) = index;
 	}
 }
+
 void shift_element(int* arr, int i) {
-	int* j;
-	for (j = (arr + i); j < arr; j--) {
-		*j = *(j - 1);
+	for(int j = i; j > 0; j--){
+		*(arr + j) = *(arr + j - 1);
 	}
 }
+
